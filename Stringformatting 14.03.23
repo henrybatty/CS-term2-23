@@ -1,0 +1,21 @@
+# Sandwich orders program
+# ----- Global variables
+numCheese = 0
+numHam = 0
+numTuna = 0
+order = ["C","C","H","T","T",
+         "C","H","H","T","C","H"]
+
+# ----- Main program
+for sandwich in order:
+    if sandwich == "C":
+        numCheese = numCheese + 1
+    elif sandwich == "H":
+        numHam = numHam + 1
+    else:
+        numTuna = numTuna + 1
+
+print("Cheese =", numCheese)
+print("Ham =", numHam)
+print("Tuna =", numTuna)
+
