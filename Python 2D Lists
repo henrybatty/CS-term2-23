@@ -1,0 +1,53 @@
+#Task 1 Create the following using a simple 2D list using the standard Python indexing:
+
+twodlist = [[2,5,8],[3,7,4],[1,6,9],[4,2,0]]
+for i in twodlist:
+ print(i)
+ 
+ # Task 2 Using the 2D list from program 1, ask the user to select a row, a column and display that value.
+twodlist = [[2,5,8],[3,7,4],[1,6,9],[4,2,0]]
+
+row = int(input("Enter a row number: "))
+col = int(input("Enter a column number: "))
+
+
+print(twodlist[row][col])
+
+# Task 3 Using the 2D list already created, ask the user which row they would like displayed and display just that row. Ask them to enter a new value and add it to the end of the row and display the row again.
+
+twodlist = [[2,5,8],[3,7,4],[1,6,9],[4,2,0]]
+row = int(input("Enter a row number: "))
+print(twodlist[row])
+new_value = int(input("Enter a new value: "))
+twodlist[row].append(new_value)
+print(twodlist[row])
+
+# Task 4 Change your previous program to ask the user which row they want displayed. Display that row. Ask which column in that row they want displayed and display the value that is held there. Ask the user if they want to change the value. If they do, ask for a new value and change the data. Finally, display the whole row again.
+twodlist = [[2, 5, 8], [3, 7, 4], [1, 6, 9], [4, 2, 0]]
+row_num = int(input('Enter the row number you want to display (starting from 0): '))
+
+print('Row number', row_num, ':', twodlist[row_num])
+
+col_num = int(input('Enter the column number you want to display (starting from 0): '))
+
+print('Value at row', row_num, 'column', col_num, ':', twodlist[row_num][col_num])
+
+change = input('Do you want to change the value? (y/n): ')
+
+if change == 'y':
+    # Ask for a new value
+    new_value = int(input('Enter the new value: '))
+    
+    # Change the data
+    twodlist[row_num][col_num] = new_value
+    print('Value changed!')
+   
+    print('Updated row:', twodlist[row_num])
+else:
+    print('Value not changed.')
+new_value = int(input('Enter a new value to append to the row: '))
+twodlist[row_num].append(new_value)
+print('Row with appended value:', twodlist[row_num])
+
+
+
